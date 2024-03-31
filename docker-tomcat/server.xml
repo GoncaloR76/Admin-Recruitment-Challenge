@@ -19,8 +19,9 @@
         <Connector port="4041" protocol="org.apache.coyote.http11.Http11NioProtocol"
                    maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
                    clientAuth="false" sslProtocol="TLS"
-                   keystoreFile="keystore.jks" keystorePass="pass123" keyAlias="tomcat" />
-
+                   keystoreFile="/opt/cert.pem" keystorePass="pass123"
+                   keyAlias="tomcat" />
+        
         <Engine name="Catalina" defaultHost="localhost">
             <Realm className="org.apache.catalina.realm.LockOutRealm">
                 <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
