@@ -1,8 +1,8 @@
 # Usar a imagem base CentOS 7
 FROM centos:7
 
-# Instale wget, Java e openssl
-RUN yum install -y wget java-1.8.0-openjdk-devel openssl
+# Instalar wget e Java
+RUN yum install -y wget java-1.8.0-openjdk-devel
 
 # Transferir e instalar o Tomcat
 ENV TOMCAT_VERSION=8.5.64
@@ -31,4 +31,3 @@ EXPOSE 4041
 
 # Iniciar o Tomcat
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
-
